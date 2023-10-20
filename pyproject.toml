@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "ornikar"
+version = "0.1.0"
+description = "Applicatif pour le test technique d'ornikar"
+authors = ["javclaude <pierre-arthur.claude@outlook.fr>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+entrainer-un-modele = "ornikar.src.entrainement.cli.entrainer_un_modele_cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+kink = "^0.7.0"
+flaml = {extras = ["automl"], version = "^2.1.1"}
+pandas = "2.1.0"
+fastapi = "^0.104.0"
+pydantic = "^2.4.2"
+rich = "^13.6.0"
+uvicorn = "^0.23.2"
+
+
+[tool.poetry.group.exploration.dependencies]
+jupyter = "^1.0.0"
+pandas = "2.1.0"
+flaml = {extras = ["automl"], version = "^2.1.1"}
+matplotlib = "^3.8.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.0"
+ruff = "^0.1.0"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

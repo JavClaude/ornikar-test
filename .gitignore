@@ -1,0 +1,7 @@
+.venv
+artefacts_ml
+donnees_brutes
+.ruff_cache
+.pyc
+__pycache__
+.idea
